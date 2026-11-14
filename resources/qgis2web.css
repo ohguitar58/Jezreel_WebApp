@@ -424,3 +424,26 @@ td video {
     color: orangered;
 	font-size: 15px;
 }
+
+/* Jezreel_WebApp readability fixes */
+.ol-popup {
+    min-width: 280px;
+    max-width: min(480px, 92vw);
+    white-space: normal;
+}
+@media (max-width: 768px) {
+    .ol-popup {
+        min-width: 0;
+        max-width: 92vw;
+    }
+    .project-title {
+        font-size: 13px;
+        line-height: 1.25;
+        max-width: calc(100vw - 76px);
+    }
+    .layer-switcher.shown .panel {
+        top: 4.4em;
+        max-height: calc(100vh - 6em);
+        overflow-y: auto;
+    }
+}
