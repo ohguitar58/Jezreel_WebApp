@@ -9,13 +9,13 @@ var style_StoryMapsites_2 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "14.3px \'Noto Sans\', sans-serif";
+    var labelFont = "20px \'Noto Sans\', sans-serif";
     var labelFill = "#000000";
     var bufferColor = "#ffffff";
-    var bufferWidth = 3.0;
+    var bufferWidth = 4.0;
     var textAlign = 'left';
-    var offsetX = 8;
-    var offsetY = 3;
+    var offsetX = 11;
+    var offsetY = 4;
     var overflow = false;
     var repeat = 0;
     var placement = 'point';
@@ -23,8 +23,8 @@ var style_StoryMapsites_2 = function(feature, resolution){
         labelText = String(feature.get("label"));
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 8.4 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(215,48,31,1.0)'})}),
+        image: new ol.style.Circle({radius: 12 + size,
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 2.0}), fill: new ol.style.Fill({color: 'rgba(215,48,31,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
