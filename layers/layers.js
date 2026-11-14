@@ -38,7 +38,7 @@ var jsonSource_StoryMapsites_2 = new ol.source.Vector({
 });
 jsonSource_StoryMapsites_2.addFeatures(features_StoryMapsites_2);
 var lyr_StoryMapsites_2 = new ol.layer.Vector({
-                declutter: 'jezreel',
+                declutter: false,
                 source:jsonSource_StoryMapsites_2, 
                 style: style_StoryMapsites_2,
                 popuplayertitle: '스토리맵 장소 / StoryMap sites',
@@ -53,7 +53,7 @@ var jsonSource_Peaks_3 = new ol.source.Vector({
 });
 jsonSource_Peaks_3.addFeatures(features_Peaks_3);
 var lyr_Peaks_3 = new ol.layer.Vector({
-                declutter: 'jezreel',
+                declutter: false,
                 source:jsonSource_Peaks_3, 
                 style: style_Peaks_3,
                 popuplayertitle: '봉우리 / Peaks',
@@ -68,7 +68,7 @@ var jsonSource_Regionlabels_4 = new ol.source.Vector({
 });
 jsonSource_Regionlabels_4.addFeatures(features_Regionlabels_4);
 var lyr_Regionlabels_4 = new ol.layer.Vector({
-                declutter: 'jezreel',
+                declutter: false,
                 source:jsonSource_Regionlabels_4, 
                 style: style_Regionlabels_4,
                 popuplayertitle: '지역명 라벨 / Region labels',
