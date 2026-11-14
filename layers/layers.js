@@ -73,7 +73,7 @@ var lyr_Regionlabels_4 = new ol.layer.Vector({
                 style: style_Regionlabels_4,
                 popuplayertitle: '지역명 라벨 / Region labels',
                 interactive: false,
-                title: '<img src="styles/legend/Regionlabels_4.png" /> 지역명 라벨 / Region labels'
+                title: '지역명 라벨 / Region labels'
             });
 
 lyr_JezreelValleylowlandcandidate_0.setVisible(true);lyr_KishonRiver_1.setVisible(true);lyr_StoryMapsites_2.setVisible(true);lyr_Peaks_3.setVisible(true);lyr_Regionlabels_4.setVisible(true);
