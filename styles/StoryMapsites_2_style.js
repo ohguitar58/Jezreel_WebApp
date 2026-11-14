@@ -9,7 +9,8 @@ var style_StoryMapsites_2 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "20px \'Noto Sans\', sans-serif";
+    var labelScale = Math.max(0.7, Math.min(1, 45/resolution));
+    var labelFont = (20*labelScale).toFixed(1) + "px 'Noto Sans', sans-serif";
     var labelFill = "#000000";
     var bufferColor = "#ffffff";
     var bufferWidth = 4.0;
@@ -23,7 +24,7 @@ var style_StoryMapsites_2 = function(feature, resolution){
         labelText = String(feature.get("label"));
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 12 + size,
+        image: new ol.style.Circle({radius: (12*labelScale) + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 2.0}), fill: new ol.style.Fill({color: 'rgba(215,48,31,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
