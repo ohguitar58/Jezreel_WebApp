@@ -9,10 +9,10 @@ var style_Regionlabels_4 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "13.0px \'Noto Sans\', sans-serif";
+    var labelFont = "18px \'Noto Sans\', sans-serif";
     var labelFill = "#000000";
     var bufferColor = "#ffffff";
-    var bufferWidth = 3.0;
+    var bufferWidth = 4.0;
     var textAlign = 'left';
     var offsetX = 8;
     var offsetY = 3;
