@@ -9,7 +9,8 @@ var style_Peaks_3 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "18px \'Noto Sans\', sans-serif";
+    var labelScale = Math.max(0.7, Math.min(1, 45/resolution));
+    var labelFont = (18*labelScale).toFixed(1) + "px 'Noto Sans', sans-serif";
     var labelFill = "#000000";
     var bufferColor = "#ffffff";
     var bufferWidth = 4.0;
@@ -23,7 +24,7 @@ var style_Peaks_3 = function(feature, resolution){
         labelText = String(feature.get("label"));
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.RegularShape({radius: 13 + size, points: 3,
+        image: new ol.style.RegularShape({radius: (13*labelScale) + size, points: 3,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.6}), fill: new ol.style.Fill({color: 'rgba(101,67,33,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
